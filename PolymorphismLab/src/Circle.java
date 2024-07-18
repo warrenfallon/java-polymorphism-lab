@@ -1,30 +1,33 @@
-public class Circle extends Shape {
-    protected double radius;
-    private final double PI = Math.PI;
 
+public class Circle extends Shape {
+    private final double radius;
+
+    // Constructor
     public Circle(double radius) {
         this.radius = radius;
     }
 
-    public Circle(double radius, double height) {
-        this.radius = radius;
-        super.height = height;
-    }
-
-    public double getArea() {
-        super.area = PI * Math.pow(this.radius, 2);
-        return super.area;
+    // Overridden methods
+    @Override
+    public double area() {
+        return Math.PI * radius * radius;
     }
 
     @Override
-    public void displayshapName() {
-        System.out.println("Drawing a Circle of radius " + this.radius);
+    public double perimeter() {
+        return 2 * Math.PI * radius;
+    }
+
+    @Override
+    public void displayShapeName() {
+        System.out.println("I am a Circle");
     }
 
     @Override
     public String toString() {
-        return "Circle[ radius = " + radius + super.toString() + "]";
+        return "Circle[radius=" + radius + "]";
     }
 }
+
 
 

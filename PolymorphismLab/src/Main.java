@@ -1,13 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        Circle circle1 = new Circle(5);
-        Circle circle2 = new Circle(7, 10);
+        // Create instances of Rectangle and Circle
+        Rectangle rect = new Rectangle(5, 10);
+        Circle circle = new Circle(7);
 
-        System.out.println(circle1);
-        System.out.println("Area of circle1: " + circle1.getArea());
+        // Call methods on the Rectangle instance
+        System.out.println("Rectangle Area: " + rect.area());
+        System.out.println("Rectangle Perimeter: " + rect.perimeter());
+        rect.displayShapeName();
+        System.out.println(rect);
 
-        System.out.println(circle2);
-        System.out.println("Area of circle2: " + circle2.getArea());
+        // Call methods on the Circle instance
+        System.out.println("Circle Area: " + circle.area());
+        System.out.println("Circle Perimeter: " + circle.perimeter());
+        circle.displayShapeName();
+        System.out.println(circle);
     }
 }
 
